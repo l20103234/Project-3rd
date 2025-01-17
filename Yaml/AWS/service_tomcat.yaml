@@ -1,0 +1,79 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-tomcat-index-service
+  namespace: tomcat
+spec:
+  type: ClusterIP
+  clusterIP: 172.20.12.111
+  selector:
+    app: tomcat
+    name: index
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-tomcat-login-service
+  namespace: tomcat
+spec:
+  type: ClusterIP
+  clusterIP: 172.20.12.112
+  selector:
+    app: tomcat
+    name: login
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-tomcat-signup-service
+  namespace: tomcat
+spec:
+  type: ClusterIP
+  clusterIP: 172.20.12.113
+  selector:
+    app: tomcat
+    name: signup
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-tomcat-menu-service
+  namespace: tomcat
+spec:
+  type: ClusterIP
+  clusterIP: 172.20.12.114
+  selector:
+    app: tomcat
+    name: menu
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-tomcat-mypage-service
+  namespace: tomcat
+spec:
+  type: ClusterIP
+  clusterIP: 172.20.12.115
+  selector:
+    app: tomcat
+    name: mypage
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080

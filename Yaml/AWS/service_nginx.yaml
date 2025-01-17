@@ -1,0 +1,84 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-index-service
+  namespace: nginx
+spec:
+  type: NodePort
+  clusterIP: 172.20.12.101
+  selector:
+    app: nginx
+    name: index
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30200
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-login-service
+  namespace: nginx
+spec:
+  type: NodePort
+  clusterIP: 172.20.12.102
+  selector:
+    app: nginx
+    name: login
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30201
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-signup-service
+  namespace: nginx
+spec:
+  type: NodePort
+  clusterIP: 172.20.12.103
+  selector:
+    app: nginx
+    name: signup
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30202
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-menu-service
+  namespace: nginx
+spec:
+  type: NodePort
+  clusterIP: 172.20.12.104
+  selector:
+    app: nginx
+    name: menu
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30203
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: seo-mypage-service
+  namespace: nginx
+spec:
+  type: NodePort
+  clusterIP: 172.20.12.105
+  selector:
+    app: nginx
+    name: mypage
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30204
