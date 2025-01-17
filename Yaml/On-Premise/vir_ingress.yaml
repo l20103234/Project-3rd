@@ -1,0 +1,53 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vir-ingress
+  namespace: nginx
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:381492042252:certificate/5ee6c802-21b2-4e7a-af0c-9ff277cd1b89
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-2016-08
+spec:
+  ingressClassName: alb
+  rules:
+  - host: leesh.shop
+    http: 
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vir-index-service
+            port:
+              number: 80
+      - path: /login.jsp
+        pathType: Prefix
+        backend:
+          service:
+            name: vir-login-service
+            port:
+              number: 80
+      - path: /signup.jsp
+        pathType: Prefix
+        backend:
+          service:
+            name: vir-signup-service
+            port:
+              number: 80
+      - path: /menu.jsp
+        pathType: Prefix
+        backend:
+          service:
+            name: vir-menu-service
+            port:
+              number: 80
+      - path: /mypage.jsp
+        pathType: Prefix
+        backend:
+          service:
+            name: vir-mypage-service
+            port:
+              number: 80
