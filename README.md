@@ -25,7 +25,7 @@ Terraform 활용한 AWS 3Tier 웹서비스구축
 
 # 4. Page
 ![image](https://github.com/user-attachments/assets/114affbd-deb8-42a5-ac38-2d170441b124)
-![image](https://github.com/user-attachments/assets/ae6b76fd-c976-4d31-8d7e-127bb8c90163)
+![image](https://github.com/user-attachments/assets/4a29a3c0-3abf-40fe-bd18-d7663abee513)
 ![image](https://github.com/user-attachments/assets/6a614b40-819c-41e4-aafd-27570652c630)
 ![image](https://github.com/user-attachments/assets/0a2fe28e-7f2d-4947-a8b5-6c1dd86fa5b1)
 ![image](https://github.com/user-attachments/assets/ede07b09-fea7-4197-93f2-434cc75cffac)
